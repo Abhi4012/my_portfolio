@@ -197,4 +197,23 @@ footer {
     .burger {
         display: block;
     }
+    /* CSS for social links */
+    .social-links {
+        display: inline-block;  /* Ensures they are treated as inline elements */
+        margin-left: auto;     /* Pushes the social links to the right */
+    }
+
+    .social-links a {
+        margin: 0 5px;         /* Sets horizontal space between icons */
+        font-size: 24px;       /* Adjusts the icon size */
+        color: inherit;        /* Ensures icons inherit the text color */
+    }
+
+    /* Optional: Center the logo and nav links */
+    nav {
+        display: flex;
+        justify-content: space-between; /* Space between items */
+        align-items: center;             /* Center items vertically */
+    }
+
 }
