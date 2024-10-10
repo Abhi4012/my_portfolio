@@ -15,6 +15,11 @@ canvas.height = window.innerHeight;
 
 let particlesArray;
 
+
+
+
+
+
 // Particle class representing neural network nodes
 class Particle {
     constructor(x, y, size, color, weight) {
