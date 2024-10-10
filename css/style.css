@@ -67,15 +67,113 @@ nav ul li a:hover {
     transition: all 0.3s ease;
 }
 
+/* --------------------------------------------New code added------------------------------ */
+
+/* Hero Section Styling */
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(228, 215, 215);
+    background: #0d0d0d;
+}
+
+/* Canvas for AI animation */
+#ai-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Foreground content */
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+#hero h1 {
+    font-size: 72px;
+    color: #80f3f3;
+    margin-bottom: 20px;
+    text-shadow: 0 0 30px rgb(15, 16, 16);
+    animation: text-glow 4s infinite alternate;
+    letter-spacing: 3px;
+}
+
+#hero p {
+    font-size: 24px;
+    color: #d7f0e7;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.btn {
+    padding: 15px 45px;
+    background: linear-gradient(90deg, #00bfa6, #00e5ff);
+    color: white;
+    font-size: 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    /* box-shadow: 0 0 20px rgba(0, 255, 255, 0.7); */
+}
+
+.btn:hover {
+    background-color: #c1dbde;
+    transform: scale(1.1);
+}
+
+/* Glowing text animation */
+@keyframes text-glow {
+    from {
+        text-shadow: 0 0 15px #c0e4e3, 0 0 30px #b7d4d3, 0 0 45px #c3dcdb;
+    }
+    to {
+        /* text-shadow: 0 0 25px #e6faf3, 0 0 50px #e5e7ee1f, 0 0 70px hsl(180, 7%, 97%); */
+    }
+}
+
+/* Code rain animation for matrix-style effect */
+@keyframes code-rain {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(100vh);
+    }
+}
+
+/* Circuit pattern and neural network effects */
+@keyframes circuit-fade {
+    0% { opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+/* --------------------------------------------------Desigining----------------------------------- ___________ */
+
+
+
+
+
 #hero {
     height: 100vh;
-    background: linear-gradient(to right, #00bfa6, #00a6a6);
+    background: linear-gradient(to right, #0d0e0d, #0e0f0f);
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
 }
+
 
 #hero h1 {
     font-size: 48px;
