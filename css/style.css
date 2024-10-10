@@ -100,7 +100,7 @@ nav ul li a:hover {
 
 #hero h1 {
     font-size: 72px;
-    color: #80f3f3;
+    color: #d0eded;
     margin-bottom: 20px;
     text-shadow: 0 0 30px rgb(15, 16, 16);
     animation: text-glow 4s infinite alternate;
@@ -114,7 +114,7 @@ nav ul li a:hover {
     letter-spacing: 2px;
 }
 
-.btn {
+/* .btn {
     padding: 15px 45px;
     background: linear-gradient(90deg, #00bfa6, #00e5ff);
     color: white;
@@ -122,8 +122,8 @@ nav ul li a:hover {
     border-radius: 50px;
     text-decoration: none;
     transition: all 0.5s ease;
-    /* box-shadow: 0 0 20px rgba(0, 255, 255, 0.7); */
-}
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+} */
 
 .btn:hover {
     background-color: #c1dbde;
@@ -133,7 +133,7 @@ nav ul li a:hover {
 /* Glowing text animation */
 @keyframes text-glow {
     from {
-        text-shadow: 0 0 15px #c0e4e3, 0 0 30px #b7d4d3, 0 0 45px #c3dcdb;
+        /* text-shadow: 0 0 15px #c0e4e3, 0 0 30px #b7d4d3, 0 0 45px #c3dcdb; */
     }
     to {
         /* text-shadow: 0 0 25px #e6faf3, 0 0 50px #e5e7ee1f, 0 0 70px hsl(180, 7%, 97%); */
@@ -184,7 +184,7 @@ nav ul li a:hover {
     font-size: 20px;
     margin-bottom: 30px;
 }
-
+/* 
 .btn {
     padding: 10px 20px;
     border: none;
@@ -194,7 +194,7 @@ nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+} */
 
 .btn:hover {
     background-color: #00a6a6;
