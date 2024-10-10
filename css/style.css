@@ -205,163 +205,79 @@ nav ul li a:hover {
     padding: 60px 0;
 }
 
-/* About Section */
+/* About Section Styling */
 #about {
     position: relative;
-    background: #000011;
     padding: 100px 0;
-    color: white;
+    background: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
-.holographic-title {
-    font-size: 64px;
+#about h2 {
     text-align: center;
-    color: #00ffcc;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+    font-size: 56px;
+    color: #00fff6;
     margin-bottom: 50px;
-    position: relative;
-    animation: glitch 3s infinite;
-    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: glow 2s infinite alternate;
 }
 
-/* Glitch Effect */
-/* @keyframes glitch {
-    0%, 100% {
-        text-shadow: 0 0 2px #00ffcc, 0 0 5px #00ffcc, 5px -5px 2px rgba(0, 255, 204, 0.8);
-    }
-    50% {
-        text-shadow: -5px -5px 5px rgba(255, 255, 255, 0.3), 5px 5px 10px rgba(0, 255, 204, 0.6);
-    }
-} */
-
-/* Matrix-Like Background */
-.matrix-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: url('matrix-background.gif') repeat; /* You can replace this with a matrix-like effect */
-    opacity: 0.1;
-}
-
-/* AI Profile Section */
-.ai-profile {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding-top: 50px;
-}
-
-/* AI Orbs - Interactive Spheres */
-.ai-orb-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-bottom: 30px;
-}
-
-.ai-orb {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    background: rgba(0, 36, 61, 0.9);
-    border-radius: 50%;
-    box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);
+#about .about-content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 0.5s ease;
+    justify-content: space-around;
+    gap: 30px;
 }
 
-.ai-orb:hover {
-    transform: scale(1.2) rotate(15deg);
+.ai-profile img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid #00ffa6;
+    box-shadow: 0 0 15px rgba(0, 255, 166, 0.7);
 }
 
-.ai-orb span {
-    color: white;
-    font-size: 22px;
-    text-align: center;
-    animation: orb-glow 2s infinite;
-}
-
-.ai-orb:hover:before {
-    content: attr(data-hover);
-    position: absolute;
-    top: -40px;
-    background: rgba(0, 255, 204, 0.9);
-    color: black;
-    padding: 10px;
+.ai-bio p {
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: #ccc;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
-    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 255, 166, 0.2);
 }
 
-/* Glowing Orb Animation */
-@keyframes orb-glow {
-    0% {
-        text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+/* Glowing text animation */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00fff6, 0 0 20px #00fff6, 0 0 30px #00fff6;
     }
-    100% {
-        text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
-    }
-}
-
-/* Profile Text */
-.profile-text p {
-    font-size: 22px;
-    line-height: 1.6;
-    color: #e0f7fa;
-    background: rgba(0, 36, 61, 0.7);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-}
-
-/* Generative Grid Background */
-.generative-grid {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('generative-patterns.gif') repeat; /* Generative AI pattern */
-    z-index: 1;
-    opacity: 0.1;
-    animation: move-grid 10s linear infinite;
-}
-
-@keyframes move-grid {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 100% 100%;
+    to {
+        text-shadow: 0 0 20px #00ffa6, 0 0 40px #00ffa6, 0 0 60px #00ffa6;
     }
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-    .ai-orb-container {
+    #about .about-content {
         flex-direction: column;
-        gap: 20px;
     }
 
-    .ai-orb {
-        width: 120px;
-        height: 120px;
+    #about h2 {
+        font-size: 40px;
     }
 
-    .holographic-title {
-        font-size: 48px;
+    .ai-bio p {
+        font-size: 18px;
     }
 }
 
