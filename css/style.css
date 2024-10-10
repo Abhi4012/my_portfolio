@@ -79,7 +79,7 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     color: rgb(228, 215, 215);
-    background: #0d0d0d;
+    background: #0d0d0df1;
 }
 
 /* Canvas for AI animation */
@@ -204,6 +204,169 @@ nav ul li a:hover {
 .section {
     padding: 60px 0;
 }
+
+/* About Section */
+#about {
+    position: relative;
+    background: #000011;
+    padding: 100px 0;
+    color: white;
+    overflow: hidden;
+}
+
+.holographic-title {
+    font-size: 64px;
+    text-align: center;
+    color: #00ffcc;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+    position: relative;
+    animation: glitch 3s infinite;
+    z-index: 2;
+}
+
+/* Glitch Effect */
+/* @keyframes glitch {
+    0%, 100% {
+        text-shadow: 0 0 2px #00ffcc, 0 0 5px #00ffcc, 5px -5px 2px rgba(0, 255, 204, 0.8);
+    }
+    50% {
+        text-shadow: -5px -5px 5px rgba(255, 255, 255, 0.3), 5px 5px 10px rgba(0, 255, 204, 0.6);
+    }
+} */
+
+/* Matrix-Like Background */
+.matrix-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: url('matrix-background.gif') repeat; /* You can replace this with a matrix-like effect */
+    opacity: 0.1;
+}
+
+/* AI Profile Section */
+.ai-profile {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* AI Orbs - Interactive Spheres */
+.ai-orb-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.ai-orb {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 36, 61, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.ai-orb:hover {
+    transform: scale(1.2) rotate(15deg);
+}
+
+.ai-orb span {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    animation: orb-glow 2s infinite;
+}
+
+.ai-orb:hover:before {
+    content: attr(data-hover);
+    position: absolute;
+    top: -40px;
+    background: rgba(0, 255, 204, 0.9);
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+    font-size: 16px;
+}
+
+/* Glowing Orb Animation */
+@keyframes orb-glow {
+    0% {
+        text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+    }
+    100% {
+        text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+    }
+}
+
+/* Profile Text */
+.profile-text p {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #e0f7fa;
+    background: rgba(0, 36, 61, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Generative Grid Background */
+.generative-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('generative-patterns.gif') repeat; /* Generative AI pattern */
+    z-index: 1;
+    opacity: 0.1;
+    animation: move-grid 10s linear infinite;
+}
+
+@keyframes move-grid {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ai-orb-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .ai-orb {
+        width: 120px;
+        height: 120px;
+    }
+
+    .holographic-title {
+        font-size: 48px;
+    }
+}
+
+
+
 
 .about-section p,
 .experience-item p {
